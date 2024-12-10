@@ -8,6 +8,6 @@ export interface Props {
 }
 
 const {contextName, lock, ...props} = Astro.props;
-const htmlSolt = await asyncContext(() => Astro.slots.render('default'), Astro, {name: contextName, lock, context: props});
+const html = await asyncContext(() => Astro.slots.render('default'), Astro, {name: contextName, lock, context: props});
 ---
-<Fragment set:html={htmlSolt} />    
+<Fragment set:html={html} />    
